@@ -90,7 +90,7 @@ define(
                           var safepayProductionKey = window.checkoutConfig.safepay_production_key;
                           var safepayTest = window.checkoutConfig.safepay_test;
                           var env = 'sandbox';
-                          if(!safepayTest){
+                          if(safepayTest === "0"){
                               env = 'production';
                           }
                           safepay.Button.render({
